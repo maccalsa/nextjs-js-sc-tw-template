@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styled from 'styled-components';
 import tw from "twin.macro";
+import StarIcon from '@/images/star-icon.svg'
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-      <StyledButton>styled-components</StyledButton>
+        <StyledStar/>
+        <StyledButton>styled-components</StyledButton>
         <br/>
         <TailwindButton>twin.macro</TailwindButton>
         <br />
@@ -57,3 +59,5 @@ const ConditionalButton = styled.button(({ isRed }) => [
     rounded
   `,
 ]);
+
+const StyledStar = styled(StarIcon)`${tw`w-20 h-20`}` 
